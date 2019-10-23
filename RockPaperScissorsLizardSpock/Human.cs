@@ -16,7 +16,10 @@ namespace RockPaperScissorsLizardSpock
 
 
         //member methods (CAN DO)
-
+        public override void ChooseGesture()
+        {
+            //
+        }
 
 
     }

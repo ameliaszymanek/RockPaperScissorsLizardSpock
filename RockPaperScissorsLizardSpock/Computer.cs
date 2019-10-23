@@ -13,11 +13,14 @@ namespace RockPaperScissorsLizardSpock
 
         //constructor (BUILD)
 
-       
+
         //member methods (CAN DO)
         public override void ChooseGesture()
         {
-            //GenerateRandomGesture instead
+            GenerateRandomGesture()
+            {
+
+            }
         }
 
     }

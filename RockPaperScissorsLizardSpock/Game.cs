@@ -29,7 +29,7 @@ namespace RockPaperScissorsLizardSpock
         {
 
             //DetermineWhoIsPlaying();
-            //DisplayRules();
+            DisplayRules();
             //player1Move, player2Move DetermineRoundWinner();
             //DisplayWinner();
 
@@ -37,13 +37,14 @@ namespace RockPaperScissorsLizardSpock
 
         private void DetermineWhoIsPlaying();
         {
-        //
+        //single or multi player game?
         }
 
 
         private void DisplayRules();
         {
-        //
+            Console.WriteLine("Rules for Rock Paper Scissors Lizard Spock: Player can choose between the five gestures of rock, paper, scissors, lizard, or Spock. Rock crushes scissors, scissors cuts paper, Paper covers Rockrock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, and Spock vaporizes rock. Best two out of three wins.");
+
         }
 
         private void DetermineRoundWinner();

@@ -10,11 +10,13 @@ namespace RockPaperScissorsLizardSpock
     {
         //member variables (HAS A)
         public int score;
+        public List<string> gestures;
 
         //constructor (BUILD)
         public Player()
         {
             score = 0;
+            gestures = new List<string>() {"rock", "paper", "scissors", "lizard", "Spock" };
         }
         
         //member methods (CAN DO)
