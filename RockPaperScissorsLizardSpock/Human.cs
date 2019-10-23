@@ -18,7 +18,7 @@ namespace RockPaperScissorsLizardSpock
         //member methods (CAN DO)
         public override void ChooseGesture()
         {
-            //
+            //humans can ChooseGesture...do I void the method or let it run?
         }
 
 

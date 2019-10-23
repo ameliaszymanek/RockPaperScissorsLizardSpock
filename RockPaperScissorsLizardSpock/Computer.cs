@@ -19,7 +19,7 @@ namespace RockPaperScissorsLizardSpock
         {
             GenerateRandomGesture()
             {
-
+                //computer can't "type in" choice like human, have to create method to GenerateRandomGesture
             }
         }
 

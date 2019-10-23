@@ -28,7 +28,7 @@ namespace RockPaperScissorsLizardSpock
         public void RunGame()
         {
 
-            //DetermineWhoIsPlaying();
+            GameType();
             DisplayRules();
             //player1Move, player2Move DetermineRoundWinner();
             //DisplayWinner();
@@ -40,11 +40,13 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine("Do you have a friend to play with or would you like to play against the compooper? Type 'human' for playing with another human or type 'compooper' to play against the computer.");
             string GameTypeChoice = Console.ReadLine();
             
-            switch(Game Type Choice)
+            switch(GameTypeChoice)
             {
                 case "human":
+                    Console.WriteLine("Enjoy your two player game. May the best human win!");
                     break;
                 case "computer":
+                    Console.WriteLine("Enjoy your game. May you be smarter than the computer.")
                     break;
                 //do I need a default option?
             }
