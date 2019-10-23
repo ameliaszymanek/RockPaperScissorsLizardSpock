@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class Player
+    abstract class Player
     {
         //member variables (HAS A)
         public int score;
@@ -20,9 +20,9 @@ namespace RockPaperScissorsLizardSpock
         }
         
         //member methods (CAN DO)
-        public string ChooseGesture()
+        public virtual void ChooseGesture()
         {
-            //
+   
         }
 
 

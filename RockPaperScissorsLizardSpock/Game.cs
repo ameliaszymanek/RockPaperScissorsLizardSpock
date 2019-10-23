@@ -35,9 +35,20 @@ namespace RockPaperScissorsLizardSpock
 
         }
 
-        private void DetermineWhoIsPlaying();
+        private void GameType();
         {
-        //single or multi player game?
+            Console.WriteLine("Do you have a friend to play with or would you like to play against the compooper? Type 'human' for playing with another human or type 'compooper' to play against the computer.");
+            string GameTypeChoice = Console.ReadLine();
+            
+            switch(Game Type Choice)
+            {
+                case "human":
+                    break;
+                case "computer":
+                    break;
+                //do I need a default option?
+            }
+
         }
 
 
