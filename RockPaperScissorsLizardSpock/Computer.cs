@@ -10,15 +10,15 @@ namespace RockPaperScissorsLizardSpock
     {
         //member variables (HAS A)
         private Random randomGesture;
-        private Generate randomName;
+        public string name;
         private List<string> computerName;
-       
+
 
         //constructor (BUILD)
         public Computer()
         {
+            ChooseName();
             randomGesture = new Random();
-            randomName = new Generate();
             computerName = new List<string>() { "Joyce", "Maria", "Christine", "Lucia", "Renee" };
         }
         
@@ -31,11 +31,12 @@ namespace RockPaperScissorsLizardSpock
                 return generatedGesture;
         }
 
-        public override string ChooseName()
+        public override void ChooseName()
         {
-            int nameGenerator = randomName.Next(0, computerName.Count);
-                string generatedName = computerName[nameGenerator];
-                return generatedName;
+            int nameGenerator = randomGesture.Next(0, computerName.Count);
+            name = computerName[nameGenerator];
+            
+
         }
 
     }

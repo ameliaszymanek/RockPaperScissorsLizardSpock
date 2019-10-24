@@ -30,10 +30,10 @@ namespace RockPaperScissorsLizardSpock
             while(player1.score < 2 && player2.score < 2)
             {
                 string player1Gesture = player1.ChooseGesture();
-                Console.WriteLine(player1 + "chose" + player1Gesture);
+                Console.WriteLine(player1.name + " chose" + " " + player1Gesture);
 
                 string player2Gesture = player2.ChooseGesture();
-                Console.WriteLine(player2 + "chose" + player2Gesture);
+                Console.WriteLine(player2.name + " chose" + " " + player2Gesture);
 
                 DetermineRoundWinner(player1Gesture, player2Gesture);
 
@@ -46,7 +46,7 @@ namespace RockPaperScissorsLizardSpock
         public void GameType()
         {
             Console.WriteLine("Do you have a friend to play with or would you like to play against the compooper? " +
-            "Type 'human' for playing with another human or type 'compooper' to play against the computer.");
+            "Type 'human' for playing with another human or type 'computer' to play against the computer.");
             string choice = Console.ReadLine();
 
             CreatePlayers(choice);
@@ -86,15 +86,15 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "lizard":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             case "scissors":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             default:
                                 player2.score++;
-                                Console.WriteLine(player2 + " won this round.");
+                                Console.WriteLine(player2.name + " won this round.");
                                 break;
                         }
                         break;
@@ -103,15 +103,15 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "spock":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             case "paper":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             default:
                                 player2.score++;
-                                Console.WriteLine(player2 + " won this round.");
+                                Console.WriteLine(player2.name + " won this round.");
                                 break;
                         }
                         break;
@@ -120,15 +120,15 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "scissors":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             case "rock":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             default:
                                 player2.score++;
-                                Console.WriteLine(player2 + " won this round.");
+                                Console.WriteLine(player2.name + " won this round.");
                                 break;
                         }
                         break;
@@ -137,15 +137,15 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "paper":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             case "lizard":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             default:
                                 player2.score++;
-                                Console.WriteLine(player2 + " won this round.");
+                                Console.WriteLine(player2.name + " won this round.");
                                 break;
                         }
                         break;
@@ -154,15 +154,15 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "rock":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             case "spock":
                                 player1.score++;
-                                Console.WriteLine(player1 + " won this round.");
+                                Console.WriteLine(player1.name + " won this round.");
                                 break;
                             default:
                                 player2.score++;
-                                Console.WriteLine(player2 + " won this round.");
+                                Console.WriteLine(player2.name + " won this round.");
                                 break;
                         }
                         break;
@@ -173,7 +173,14 @@ namespace RockPaperScissorsLizardSpock
 
         private void DisplayWinner()
         {
-            //
+            if (player1.score == 3)
+            {
+                Console.WriteLine(player1.name + "you won!!!");
+            }
+            else
+            {
+                Console.WriteLine(player2.name + "you won!!!");
+            }
         }
 
     }

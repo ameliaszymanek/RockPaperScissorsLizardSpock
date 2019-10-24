@@ -13,7 +13,10 @@ namespace RockPaperScissorsLizardSpock
 
 
         //constructor (BUILD)
-
+        public Human()
+        {
+            ChooseName();
+        }
 
         //member methods (CAN DO)
         public override string ChooseGesture()
@@ -23,11 +26,10 @@ namespace RockPaperScissorsLizardSpock
             return gesture;
         }
 
-        public override string ChooseName()
+        public override void ChooseName()
         {
             Console.WriteLine("Choose your name for the game");
             name = Console.ReadLine();
-            return name;
         }
 
 
