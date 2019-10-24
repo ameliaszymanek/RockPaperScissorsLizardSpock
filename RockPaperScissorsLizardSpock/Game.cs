@@ -33,10 +33,10 @@ namespace RockPaperScissorsLizardSpock
             
             while(player1.score < 2 && player2.score < 2)
             {
-                string player1Gesture = player1.ChooseGesture(//????);
+                string player1Gesture = player1.ChooseGesture();
                 Console.WriteLine(player1 + "chose" + player1Gesture);
 
-                string player2Gesture = player2.ChooseGesture(//????);
+                string player2Gesture = player2.ChooseGesture();
                 Console.WriteLine(player2 + "chose" + player2Gesture);
 
                 DetermineRoundWinner(player1Gesture, player2Gesture);
@@ -77,25 +77,81 @@ namespace RockPaperScissorsLizardSpock
 
         private void DetermineRoundWinner(string player1Gesture, string player2Gesture)
         {
-            //if(player 1 wins the round) then run this switch case
+            //if(player 1 wins the round) then run this switch case{
             
-            switch (player1Gesture)
-            {
-                case "rock":
-                    switch (player2Gesture)
-                    {
-                        case "lizard" :
-                            player1.score++;
-                            break;
-                        case ""
-                    }
+                switch (player1Gesture)
+                {
+                    case "rock":
+                        switch (player2Gesture)
+                        {
+                            case "lizard" :
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                            case "scissors":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                        }
                     break;
-                //
-            }
+                    case "lizard":
+                        switch (player2Gesture)
+                        {
+                            case "spock":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                            case "paper":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                        }
+                    break;
+                    case "spock":
+                        switch (player2Gesture)
+                        {
+                            case "scissors":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                            case "rock":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                        }
+                    break;
+                    case "scissors":
+                        switch (player2Gesture)
+                        {
+                            case "paper":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                            case "lizard":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                        }
+                    break;
+                    case "paper":
+                        switch (player2Gesture)
+                        {
+                            case "rock":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                            case "spock":
+                                player1.score++;
+                                Console.WriteLine(player1 + " won this round.");
+                                break;
+                        }
+                    break;
+   
+                //}
 
-            //else if(theres a tie) then run this switch case
+            //else if(theres a tie) {then run this switch case}
 
-            //else player 2 wins
+            //else {player 2 wins}
         }
 
         private void DisplayWinner()
