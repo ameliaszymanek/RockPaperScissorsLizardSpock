@@ -15,13 +15,15 @@ namespace RockPaperScissorsLizardSpock
 
 
         //member methods (CAN DO)
-        //public override void ChooseGesture()
-        //{
-        //    GenerateRandomGesture()
-        //    {
-        //        //computer can't "type in" choice like human, have to create method to GenerateRandomGesture
-        //    }
-        //}
+        public override void ChooseGesture()
+        {
+            //random choice logic
+        }
+
+        public override void ChooseName()
+        {
+           //logic to name computer
+        }
 
     }
 }

@@ -49,7 +49,6 @@ namespace RockPaperScissorsLizardSpock
             {
                 player1 = new Human();
                 player2 = new Human();
-
             }
             else if (choice == "computer")
             {
