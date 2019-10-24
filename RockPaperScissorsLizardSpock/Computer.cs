@@ -10,16 +10,16 @@ namespace RockPaperScissorsLizardSpock
     {
         //member variables (HAS A)
         private Random randomGesture;
-        public string name;
+        //public string name;
         private List<string> computerName;
 
 
         //constructor (BUILD)
         public Computer()
         {
-            ChooseName();
             randomGesture = new Random();
             computerName = new List<string>() { "Joyce", "Maria", "Christine", "Lucia", "Renee" };
+            ChooseName();
         }
         
 

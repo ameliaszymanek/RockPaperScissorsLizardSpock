@@ -173,7 +173,7 @@ namespace RockPaperScissorsLizardSpock
 
         private void DisplayWinner()
         {
-            if (player1.score == 3)
+            if (player1.score> player2.score)
             {
                 Console.WriteLine(player1.name + "you won!!!");
             }
