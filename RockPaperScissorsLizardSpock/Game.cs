@@ -35,40 +35,27 @@ namespace RockPaperScissorsLizardSpock
 
         }
 
-        public string GameType()
+        public void GameType()
         {
             Console.WriteLine("Do you have a friend to play with or would you like to play against the compooper? " +
             "Type 'human' for playing with another human or type 'compooper' to play against the computer.");
             string choice = Console.ReadLine();
-            return choice;
+
+            CreatePlayers(choice);
         }
-        public void CreatePlayers(string numberPlayers)
+        public void CreatePlayers(string choice)
         {
-            if (numberPlayers = "human")
+            if (choice == "human")
             {
                 player1 = new Human();
                 player2 = new Human();
+
             }
-            else if (numberPlayers = "computer")
+            else if (choice == "computer")
             {
                 player1 = new Human();
                 player2 = new Computer();
             }
-        }
-
-            switch (choice)
-            {
-                case "human":
-                    Console.WriteLine("Enjoy your two player game. May the best human win!");
-                    break;
-                case "computer":
-                    Console.WriteLine("Enjoy your game. May you be smarter than the computer.");
-                    break;
-                default:
-                    Console.WriteLine("Choose either 'human' or 'computer'.");
-                    break;
-            }
-            return choice;
         }
 
 
