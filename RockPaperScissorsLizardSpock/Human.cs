@@ -19,13 +19,13 @@ namespace RockPaperScissorsLizardSpock
         public override void ChooseGesture()
         {
             Console.WriteLine("Choose your gesture");
-            gestures = Console.ReadLine
+            gesture = Console.ReadLine();
         }
 
         public override void ChooseName()
         {
             Console.WriteLine("Choose your name for the game");
-            name = Console.ReadLine
+            name = Console.ReadLine();
         }
 
 

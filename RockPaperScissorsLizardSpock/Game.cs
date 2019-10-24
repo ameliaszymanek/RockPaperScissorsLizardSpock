@@ -16,11 +16,11 @@ namespace RockPaperScissorsLizardSpock
 
 
         //constructor (BUILDER)
-        //public Game()
-        //{
-        //    player1 = new Player();
-        //    player2 = new Player();
-        //}
+        public Game()
+        {
+            player1 = new Player();
+            player2 = new Player();
+        }
 
 
 
@@ -30,8 +30,20 @@ namespace RockPaperScissorsLizardSpock
 
             GameType();
             DisplayRules();
-            //player1Move, player2Move DetermineRoundWinner();
-            //DisplayWinner();
+            
+            while(player1.score < 2 && player2.score < 2)
+            {
+                string player1Gesture = player1.ChooseGesture(//????);
+                Console.WriteLine(player1 + "chose" + player1Gesture);
+
+                string player2Gesture = player2.ChooseGesture(//????);
+                Console.WriteLine(player2 + "chose" + player2Gesture);
+
+                DetermineRoundWinner(player1Gesture, player2Gesture);
+
+            }
+           
+            DisplayWinner();
 
         }
 
@@ -57,16 +69,33 @@ namespace RockPaperScissorsLizardSpock
             }
         }
 
-
         private void DisplayRules()
         {
             Console.WriteLine("Rules for Rock Paper Scissors Lizard Spock: Player can choose between the five gestures of rock, paper, scissors, lizard, or Spock. Rock crushes scissors, scissors cuts paper, Paper covers Rockrock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, and Spock vaporizes rock. Best two out of three wins.");
 
         }
 
-        private void DetermineRoundWinner()
+        private void DetermineRoundWinner(string player1Gesture, string player2Gesture)
         {
-            //player1Move, player2Move
+            //if(player 1 wins the round) then run this switch case
+            
+            switch (player1Gesture)
+            {
+                case "rock":
+                    switch (player2Gesture)
+                    {
+                        case "lizard" :
+                            player1.score++;
+                            break;
+                        case ""
+                    }
+                    break;
+                //
+            }
+
+            //else if(theres a tie) then run this switch case
+
+            //else player 2 wins
         }
 
         private void DisplayWinner()
