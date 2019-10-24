@@ -27,7 +27,7 @@ namespace RockPaperScissorsLizardSpock
             GameType();
             DisplayRules();
             
-            while(player1.score < 2 && player2.score < 2)
+            while(player1.score <= 2 && player2.score <= 2)
             {
                 string player1Gesture = player1.ChooseGesture();
                 Console.WriteLine(player1.name + " chose" + " " + player1Gesture);
@@ -40,6 +40,7 @@ namespace RockPaperScissorsLizardSpock
             }
            
             DisplayWinner();
+            GameType();
 
         }
 
@@ -173,13 +174,13 @@ namespace RockPaperScissorsLizardSpock
 
         private void DisplayWinner()
         {
-            if (player1.score> player2.score)
+            if (player1.score == 3)
             {
-                Console.WriteLine(player1.name + "you won!!!");
+                Console.WriteLine(player1.name + " you won!!!");
             }
             else
             {
-                Console.WriteLine(player2.name + "you won!!!");
+                Console.WriteLine(player2.name + " you won!!!");
             }
         }
 
