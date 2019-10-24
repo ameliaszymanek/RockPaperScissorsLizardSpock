@@ -16,11 +16,7 @@ namespace RockPaperScissorsLizardSpock
 
 
         //constructor (BUILDER)
-        public Game()
-        {
-            player1 = new Player();
-            player2 = new Player();
-        }
+        
 
 
 
@@ -77,7 +73,11 @@ namespace RockPaperScissorsLizardSpock
 
         private void DetermineRoundWinner(string player1Gesture, string player2Gesture)
         {
-            if()
+            if(player1Gesture == player2Gesture)
+            {
+                Console.WriteLine("You tied!");
+            }
+            else if(player1Gesture != player2Gesture)
             {
                 switch (player1Gesture)
                 {
@@ -92,6 +92,10 @@ namespace RockPaperScissorsLizardSpock
                                 player1.score++;
                                 Console.WriteLine(player1 + " won this round.");
                                 break;
+                            default:
+                                player2.score++;
+                                Console.WriteLine(player2 + " won this round.");
+                                break;
                         }
                         break;
                     case "lizard":
@@ -104,6 +108,10 @@ namespace RockPaperScissorsLizardSpock
                             case "paper":
                                 player1.score++;
                                 Console.WriteLine(player1 + " won this round.");
+                                break;
+                            default:
+                                player2.score++;
+                                Console.WriteLine(player2 + " won this round.");
                                 break;
                         }
                         break;
@@ -118,6 +126,10 @@ namespace RockPaperScissorsLizardSpock
                                 player1.score++;
                                 Console.WriteLine(player1 + " won this round.");
                                 break;
+                            default:
+                                player2.score++;
+                                Console.WriteLine(player2 + " won this round.");
+                                break;
                         }
                         break;
                     case "scissors":
@@ -130,6 +142,10 @@ namespace RockPaperScissorsLizardSpock
                             case "lizard":
                                 player1.score++;
                                 Console.WriteLine(player1 + " won this round.");
+                                break;
+                            default:
+                                player2.score++;
+                                Console.WriteLine(player2 + " won this round.");
                                 break;
                         }
                         break;
@@ -144,62 +160,13 @@ namespace RockPaperScissorsLizardSpock
                                 player1.score++;
                                 Console.WriteLine(player1 + " won this round.");
                                 break;
+                            default:
+                                player2.score++;
+                                Console.WriteLine(player2 + " won this round.");
+                                break;
                         }
                         break;
-
-                } 
-                else if ()
-                {
-                    switch (player1Gesture)
-                    {
-                        case "rock":
-                            switch (player2Gesture)
-                            {
-                                case "rock":                                 
-                                    Console.WriteLine("It's a tie!");
-                                    break;
-                            }
-                            break;
-                        case "lizard":
-                            switch (player2Gesture)
-                            {
-                                case "lizard":
-                                    Console.WriteLine("It's a tie!");
-                                    break;
-                            }
-                            break;
-                        case "spock":
-                            switch (player2Gesture)
-                            {
-                                case "spock":
-                                    Console.WriteLine("It's a tie!");
-                                    break;
-                            }
-                            break;
-                        case "scissors":
-                            switch (player2Gesture)
-                            {
-                                case "scissors":
-                                    Console.WriteLine("It's a tie!");
-                                    break;
-                            }
-                            break;
-                        case "paper":
-                            switch (player2Gesture)
-                            {
-                                case "paper":
-                                    Console.WriteLine("It's a tie!");
-                                    break;
-                            }
-                            break;
-                    }
-
-
-                else()
-                {
-                        player2.score++;
-                        Console.WriteLine(player2 + " won this round.");
-                    }
+                }  
             }
         }
 

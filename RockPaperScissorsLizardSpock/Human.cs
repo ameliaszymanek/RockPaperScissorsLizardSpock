@@ -16,16 +16,18 @@ namespace RockPaperScissorsLizardSpock
 
 
         //member methods (CAN DO)
-        public override void ChooseGesture()
+        public override string ChooseGesture()
         {
             Console.WriteLine("Choose your gesture");
-            gesture = Console.ReadLine();
+            string gesture = Console.ReadLine();
+            return gesture;
         }
 
-        public override void ChooseName()
+        public override string ChooseName()
         {
             Console.WriteLine("Choose your name for the game");
             name = Console.ReadLine();
+            return name;
         }
 
 

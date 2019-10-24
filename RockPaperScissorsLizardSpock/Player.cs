@@ -17,12 +17,12 @@ namespace RockPaperScissorsLizardSpock
         public Player()
         {
             score = 0;
-            gestures = new List<string>() {"rock", "paper", "scissors", "lizard", "Spock" };
+            gestures = new List<string>() {"rock", "paper", "scissors", "lizard", "spock" };
         }
 
         //member methods (CAN DO)
-        public abstract void ChooseGesture();
-        public abstract void ChooseName();
+        public abstract string ChooseGesture();
+        public abstract string ChooseName();
 
 
 
