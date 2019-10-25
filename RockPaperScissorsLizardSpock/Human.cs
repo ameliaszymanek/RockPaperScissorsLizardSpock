@@ -29,11 +29,10 @@ namespace RockPaperScissorsLizardSpock
                 {
                     break;
                 }
-                else
+                else if (choice == gestures[gestures.Count - 1])
                 {
                     Console.WriteLine("ERROR: Must enter valid gesture.");
-                    ChooseGesture();
-                    break;
+                    return ChooseGesture();
                 }
             }
             return gesture;
