@@ -22,7 +22,7 @@ namespace RockPaperScissorsLizardSpock
         public override string ChooseGesture()
         {
             Console.WriteLine(name + " choose your gesture");
-            string gesture = Console.ReadLine();
+            string gesture = Console.ReadLine().ToLower();
             foreach (string choice in gestures)
             {
                 if (gesture == choice)

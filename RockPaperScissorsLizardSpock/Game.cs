@@ -11,15 +11,7 @@ namespace RockPaperScissorsLizardSpock
         //member variable (HAS A)
         private Player player1;
         private Player player2;
-
-
-
-
-        //constructor (BUILDER)
-        
-
-
-
+       
         //member method (CAN DO)
         public void RunGame()
         {
@@ -50,8 +42,7 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine("Do you have a friend to play with or would you like to play against the compooper? " +
             "Type 'human' for playing with another human or type 'computer' to play against the computer.");
             string choice = Console.ReadLine();
-
-            CreatePlayers(choice);
+            CreatePlayers(choice.ToLower());
         }
         public void CreatePlayers(string choice)
         {
@@ -74,7 +65,7 @@ namespace RockPaperScissorsLizardSpock
 
         private void DisplayRules()
         {
-            Console.WriteLine("Rules for Rock Paper Scissors Lizard Spock: Player can choose between the five gestures of rock, paper, scissors, lizard, or Spock. Rock crushes scissors, scissors cuts paper, Paper covers Rockrock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, and Spock vaporizes rock. Best two out of three wins.");
+            Console.WriteLine("Rules for Rock Paper Scissors Lizard Spock: Player can choose between the five gestures of rock, paper, scissors, lizard, or spock. Rock crushes scissors, scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons spock, spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves spock, and spock vaporizes rock. Best two out of three wins.");
 
         }
 
@@ -194,8 +185,7 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine("Would you like to play again? If so, type 'yes', if not, type 'no'.");
             string choice = Console.ReadLine();
-            WhatIsNext(choice);
-
+            WhatIsNext(choice.ToLower());
         }
         public void WhatIsNext(string choice)
         {
