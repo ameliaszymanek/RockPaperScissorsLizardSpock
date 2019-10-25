@@ -32,6 +32,7 @@ namespace RockPaperScissorsLizardSpock
                 string player1Gesture = player1.ChooseGesture();
                 Console.WriteLine(player1.name + " chose" + " " + player1Gesture);
 
+
                 string player2Gesture = player2.ChooseGesture();
                 Console.WriteLine(player2.name + " chose" + " " + player2Gesture);
 

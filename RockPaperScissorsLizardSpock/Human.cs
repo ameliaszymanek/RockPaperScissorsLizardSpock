@@ -23,6 +23,19 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine("Choose your gesture");
             string gesture = Console.ReadLine();
+            foreach (string choice in gestures)
+            {
+                if (gesture == choice)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("ERROR: Must enter valid gesture.");
+                    ChooseGesture();
+                    break;
+                }
+            }
             return gesture;
         }
 
