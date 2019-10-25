@@ -41,7 +41,7 @@ namespace RockPaperScissorsLizardSpock
             }
            
             DisplayWinner();
-            GameType();
+            PlayAgain();
 
         }
 
@@ -185,5 +185,28 @@ namespace RockPaperScissorsLizardSpock
             }
         }
 
+        public void PlayAgain()
+        {
+            Console.WriteLine("Would you like to play again? If so, type 'yes', if not, type 'no'.");
+            string choice = Console.ReadLine();
+            WhatIsNext(choice);
+
+        }
+        public void WhatIsNext(string choice)
+        {
+            if (choice == "yes")
+            {
+                RunGame();
+            }
+            else if (choice == "no")
+            {
+                Console.WriteLine("Hope you had fun! :)");
+            }
+            else
+            {
+                Console.WriteLine("ERROR: That is not a valid choice. Type in a valid choice.");
+                PlayAgain();
+            }
+        }
     }
 }

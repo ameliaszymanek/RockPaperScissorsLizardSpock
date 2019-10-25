@@ -21,7 +21,7 @@ namespace RockPaperScissorsLizardSpock
         //member methods (CAN DO)
         public override string ChooseGesture()
         {
-            Console.WriteLine("Choose your gesture");
+            Console.WriteLine(name + " choose your gesture");
             string gesture = Console.ReadLine();
             foreach (string choice in gestures)
             {
