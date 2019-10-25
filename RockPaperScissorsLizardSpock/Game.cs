@@ -65,6 +65,11 @@ namespace RockPaperScissorsLizardSpock
                 player1 = new Human();
                 player2 = new Computer();
             }
+            else
+            {
+                Console.WriteLine("ERROR: That is not a valid choice. Try again.");
+                GameType();
+            }
         }
 
         private void DisplayRules()
